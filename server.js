@@ -29,10 +29,6 @@ const port = 3000;
 // })
 
 
-
-
-
-
 // INDEX Route
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
