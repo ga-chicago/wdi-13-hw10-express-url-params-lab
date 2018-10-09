@@ -1,12 +1,30 @@
 // DEPENDENCIES
 const express = require('express');
 const app = express();
-
-// run `npm install` to install dependencies in package.json
+const MarsMissions = require('./models/marsMissions');
 
 // * Your mission is to complete the app
 // * The app will need routes for index and show
+
+//Index route - missions
+app.get('/marsMissions', (req, res) => {
+  res.send(MarsMissions);
+});
+
+//show route - missions
+app.get('/marsMissions/:id', (req, res) => {
+  res.render('show.ejs', {
+    marsMissions: MarsMissions[req.param.id]
+  })
+});
 // * The app will need views for index and show
+
+app.get('/', (req, res) => {
+
+});
+app.get('/:id', (req, res) => {
+
+});
 //
 // * MAIN GOAL:
 // * User should be able to click on a mission’s name on the index page, and be taken to that mission’s show page
@@ -14,53 +32,11 @@ const app = express();
 // * Bonus/Hungry for More: add images to the data and have them display (google how)
 // * Bonus/Hungry for More: add static css to style the pages (google how)
 
-// NOTES:
-// ejs has not been installed
-// views folder has not been created
-// views/missions folder has not been created
 
 // PORT
 const port = 3000;
 
-// DATA - put into marsMissions.js file inside of a models folder, for module.exports
-// remember to require it in the server
-const marsMissions = [
-  {
-    name: "Curiosity",
-    launchDate: "26 Nov 2011",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Opportunity",
-    launchDate: "8 Jul 2003",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Spirit",
-    launchDate: "10 Jun 2003",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Sojourner",
-    launchDate: "4 Dec 1996",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Rosetta",
-    launchDate: "2 Mar 2004",
-    operator: "ESA",
-    missionType: "Gravity Assist",
-    img: ""
-  }
-];
+
 
 // INDEX Route
 // send data to 'missions/index.ejs' view
