@@ -1,30 +1,29 @@
 // DEPENDENCIES
 const express = require('express');
 const app = express();
-const MarsMissions = require('./models/marsMissions');
+
+const MarsMissions = require('./models/missions');
 
 // * Your mission is to complete the app
 // * The app will need routes for index and show
 
 //Index route - missions
-app.get('/marsMissions', (req, res) => {
+app.get('/missions', (req, res) => {
   res.send(MarsMissions);
 });
 
 //show route - missions
-app.get('/marsMissions/:id', (req, res) => {
+app.get('/missions/:id', (req, res) => {
   res.render('show.ejs', {
     marsMissions: MarsMissions[req.param.id]
   })
 });
 // * The app will need views for index and show
 
-app.get('/', (req, res) => {
+// app.set('views', '');
+// app.get('/:id', (req, res) => {
 
-});
-app.get('/:id', (req, res) => {
-
-});
+// });
 //
 // * MAIN GOAL:
 // * User should be able to click on a mission’s name on the index page, and be taken to that mission’s show page
