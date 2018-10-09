@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index Page</title>
+</head>
+<body>
+	<h1>Mars Missions Index Page</h1>
+	<ul class='missions'>
+		<%marsMissions.forEach((el, i) => { %>
+			<li> <a href="http://localhost:3000/missions/<%=i%>"> <%=el.name%> </a> </li>
+		<% }) %>
+	</ul>
+</body>
+</html>
