@@ -14,6 +14,7 @@ const MarsMissions = require('./models/marsMissions.js')
 // * User should be able to click on a mission’s name on the index page, and be taken to that mission’s show page
 //
 // * Bonus/Hungry for More: add images to the data and have them display (google how)
+app.use( express.static( "public" ) );
 // * Bonus/Hungry for More: add static css to style the pages (google how)
 
 // NOTES:
@@ -24,7 +25,6 @@ const MarsMissions = require('./models/marsMissions.js')
 
 // PORT
 const port = 3000;
-
 
 // INDEX Route
 // send data to 'missions/index.ejs' view

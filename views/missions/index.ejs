@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mars Missions - Names</title>
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Francois+One|Patua+One|Righteous" rel="stylesheet">
+	
+	<title>Index - Mars Missions - Names</title>
 </head>
 <body>
 
-	<h1>Mars Missions - Names</h1>
+	<h1>Index - Mars Missions - Names</h1>
 
 	<ul class="missions">
 		<%MarsMissions.forEach((elem, i) => {%>
-		<li><%=elem.name%></li>
+		<li><a href="http://localhost:3000/missions/<%=i%>"><%=elem.name%></a></li>
 
 		<%})%>
 	</ul>

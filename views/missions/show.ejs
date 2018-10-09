@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mars Missions - Names</title>
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Francois+One|Patua+One|Righteous" rel="stylesheet">
+
+	<title><%= mission.name%></title>
 </head>
 <body>
+	<nav><a href="http://localhost:3000/missions">Index</a></nav>
 
 	<h1>Mars Mission - <%= mission.name%></h1>
 
 	<ul>
-		<li><%= mission.name%>'s launch date was on: <%=mission.launchDate%></li>
-		<li><%= mission.name%>'s operator was: <%=mission.operator%></li>
-		<li><%= mission.name%>'s mission type was: <%=mission.missionType%></li>
-
+		<li>Launch date: <%=mission.launchDate%></li>
+		<li>Operator: <%=mission.operator%></li>
+		<li>Mission type: <%=mission.missionType%></li>
 	</ul>
-
+	<img src="/images/<%=mission.img%>">
+	
 </body>
 </html>
