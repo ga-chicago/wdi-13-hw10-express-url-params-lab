@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Francois+One|Patua+One|Righteous" rel="stylesheet">
+
+	<title><%= mission.name%></title>
+</head>
+<body>
+	<nav><a href="http://localhost:3000/missions">Index</a></nav>
+
+	<h1>Mars Mission - <%= mission.name%></h1>
+
+	<ul>
+		<li>Launch date: <%=mission.launchDate%></li>
+		<li>Operator: <%=mission.operator%></li>
+		<li>Mission type: <%=mission.missionType%></li>
+	</ul>
+	<img src="/images/<%=mission.img%>">
+	
+</body>
+</html>
